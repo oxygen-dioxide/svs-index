@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
+import RJSON from 'relaxed-json';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -95,7 +96,7 @@ function buildSingerObject(data) {
   try {
     const raw = data.variants_json || data.variants || '[]';
     const cleaned = stripCodeFence(raw);
-    variants = JSON.parse(cleaned);
+    variants = RJSON.parse(cleaned);
   } catch (e) {
     throw new Error(
       'Invalid JSON in "Variants" field. Ensure it is valid JSON (usually an array). Example: [\n  { "id": "eng", "names": { "en": "English" } }\n]\nOriginal error: ' +
@@ -216,8 +217,8 @@ function validateSchema(obj, schemaPath) {
     }
     throw new Error(
       'Schema validation failed. Please correct the following:\n' +
-        formatted +
-        '\n\nSee the schema file and README for required fields.'
+      formatted +
+      '\n\nSee the schema file and README for required fields.'
     );
   }
 }
@@ -240,14 +241,45 @@ async function postIssueComment(body) {
   }
 }
 
-function main() {
-  const isSinger = issueTitle.toLowerCase().includes('singer');
-  const category = isSinger ? 'singer' : 'software';
+async function getIssueLabels() {
+  if (!githubToken || !githubRepo || !issueNumber) return [];
+  const url = `https://api.github.com/repos/${githubRepo}/issues/${issueNumber}`;
+  const res = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${githubToken}`,
+      Accept: 'application/vnd.github+json',
+    },
+  });
+  if (!res.ok) return [];
+  const data = await res.json().catch(() => null);
+  const labels = Array.isArray(data?.labels) ? data.labels : [];
+  return labels.map((l) => (typeof l === 'string' ? l : l?.name || '')).filter(Boolean);
+}
+
+async function detectCategory() {
+  // Prefer labels when available
+  try {
+    const labels = (await getIssueLabels()).map((s) => String(s).toLowerCase());
+    if (labels.includes('singer')) return 'singer';
+    if (labels.includes('software')) return 'software';
+  } catch { }
+  // Fallback: title heuristic
+  const t = issueTitle.toLowerCase();
+  if (/(^|\b)singer(\b|$)/.test(t)) return 'singer';
+  if (/(^|\b)software(\b|$)/.test(t)) return 'software';
+  // Last resort: infer from form fields
+  const data = parseIssueForm(issueBody);
+  if (data.category || data.developers) return 'software';
+  return 'singer';
+}
+
+async function main() {
+  const category = await detectCategory();
   const dataDir = path.join(__dirname, '..', 'data', `${category}s`);
   const schemaPath = path.join(__dirname, '..', 'data', `${category}-schema.json`);
 
   const parsedData = parseIssueForm(issueBody);
-  const obj = isSinger ? buildSingerObject(parsedData) : buildSoftwareObject(parsedData);
+  const obj = category === 'singer' ? buildSingerObject(parsedData) : buildSoftwareObject(parsedData);
 
   // Validate
   validateSchema(obj, schemaPath);
