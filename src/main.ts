@@ -56,6 +56,11 @@ function normalize(str: string): string {
   return str.toLowerCase();
 }
 
+function formatAllNames(names: Record<string, string>): string {
+  const values = Object.values(names);
+  return values.length > 1 ? values.join(' / ') : '';
+}
+
 function singerMatches(s: Singer, q: string): boolean {
   if (!q) return true;
   const n = normalize(q);
@@ -96,6 +101,7 @@ function render() {
     resultsEl.innerHTML = filtered
       .map((s) => {
         const name = s.names.en || Object.values(s.names)[0] || s.id;
+        const allNames = formatAllNames(s.names);
         const detailUrl = `detail.html?category=singer&id=${encodeURIComponent(s.id)}`;
 
         // Collect all unique tags from variants
@@ -118,6 +124,7 @@ function render() {
             <a href="${detailUrl}" class="card-title">${name}</a>
             <span class="card-id">@${s.id}</span>
           </div>
+          ${allNames ? `<div class="card-all-names">${allNames}</div>` : ''}
           ${variants ? `<div class="card-variants">${variants}</div>` : ''}
           ${tags ? `<div class="card-tags">${tags}</div>` : ''}
         </div>`;
@@ -128,6 +135,7 @@ function render() {
     resultsEl.innerHTML = filtered
       .map((s) => {
         const name = s.names.en || Object.values(s.names)[0] || s.id;
+        const allNames = formatAllNames(s.names);
         const detailUrl = `detail.html?category=software&id=${encodeURIComponent(s.id)}`;
 
         const tags = (s.tags || [])
@@ -139,6 +147,7 @@ function render() {
             <a href="${detailUrl}" class="card-title">${name}</a>
             <span class="card-id">@${s.id}</span>
           </div>
+          ${allNames ? `<div class="card-all-names">${allNames}</div>` : ''}
           ${tags ? `<div class="card-tags">${tags}</div>` : ''}
         </div>`;
       })

@@ -71,19 +71,26 @@ function buildSingerObject(data) {
     return s;
   }
 
-  const names = { en: data.name_english || data.name_en };
-  if (data.name_japanese || data.name_ja) names.ja = data.name_japanese || data.name_ja;
-  if (data.name_chinese || data.name_zh) names.zh = data.name_chinese || data.name_zh;
+  // Names (set only when meaningful; drop "_No response_")
+  const enName = cleanOptional(data.name_english || data.name_en);
+  const names = {};
+  if (enName) names.en = enName;
+  const jaName = cleanOptional(data.name_japanese || data.name_ja);
+  if (jaName) names.ja = jaName;
+  const zhName = cleanOptional(data.name_chinese || data.name_zh);
+  if (zhName) names.zh = zhName;
 
+  // Owners / Authors lists, filter placeholders
   const owners = (data.owners || '')
     .split('\n')
-    .map((s) => s.trim())
+    .map((s) => cleanOptional(s))
     .filter(Boolean);
   const authors = (data.authors || '')
     .split('\n')
-    .map((s) => s.trim())
+    .map((s) => cleanOptional(s))
     .filter(Boolean);
 
+  // Variants JSON (strip code fences)
   let variants;
   try {
     const raw = data.variants_json || data.variants || '[]';
@@ -97,7 +104,7 @@ function buildSingerObject(data) {
   }
 
   const obj = {
-    id: data.unique_id || data.id,
+    id: cleanOptional(data.unique_id) || cleanOptional(data.id),
     names,
     owners,
     authors,
@@ -120,19 +127,24 @@ function buildSingerObject(data) {
 }
 
 function buildSoftwareObject(data) {
-  const names = { en: data.name_english || data.name_en };
-  if (data.name_japanese || data.name_ja) names.ja = data.name_japanese || data.name_ja;
-  if (data.name_chinese || data.name_zh) names.zh = data.name_chinese || data.name_zh;
+  // Names (set only when meaningful)
+  const enName = cleanOptional(data.name_english || data.name_en);
+  const names = {};
+  if (enName) names.en = enName;
+  const jaName = cleanOptional(data.name_japanese || data.name_ja);
+  if (jaName) names.ja = jaName;
+  const zhName = cleanOptional(data.name_chinese || data.name_zh);
+  if (zhName) names.zh = zhName;
 
   const developers = (data.developers || '')
     .split('\n')
-    .map((s) => s.trim())
+    .map((s) => cleanOptional(s))
     .filter(Boolean);
 
   const obj = {
-    id: data.unique_id || data.id,
+    id: cleanOptional(data.unique_id) || cleanOptional(data.id),
     names,
-    category: data.category,
+    category: cleanOptional(data.category),
     developers,
   };
 
@@ -155,7 +167,7 @@ function buildSoftwareObject(data) {
   if (data.tags) {
     obj.tags = data.tags
       .split(',')
-      .map((s) => s.trim())
+      .map((s) => cleanOptional(s))
       .filter(Boolean);
   }
 
@@ -216,11 +228,11 @@ async function postIssueComment(body) {
   const res = await fetch(url, {
     method: 'POST',
     headers: {
-      'Authorization': `Bearer ${githubToken}`,
-      'Accept': 'application/vnd.github+json',
-      'Content-Type': 'application/json'
+      Authorization: `Bearer ${githubToken}`,
+      Accept: 'application/vnd.github+json',
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ body })
+    body: JSON.stringify({ body }),
   });
   if (!res.ok) {
     const txt = await res.text().catch(() => '');
@@ -266,7 +278,7 @@ async function run() {
     await main();
   } catch (error) {
     // Also print a GitHub Actions error annotation for better visibility
-    const msg = (error && error.message) ? error.message : String(error);
+    const msg = error && error.message ? error.message : String(error);
     console.log(`::error title=Issue processing failed::${msg}`);
     console.error('❌ Error:', msg);
     // Attempt to report back to the originating issue

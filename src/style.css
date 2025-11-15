@@ -240,6 +240,13 @@ header h1 {
   font-family: ui-monospace, monospace;
 }
 
+.card-all-names {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
 .card-meta {
   font-size: 13px;
   color: var(--muted);
@@ -283,36 +290,74 @@ header h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
 }
 
 .detail-header h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 32px;
   margin: 0;
   display: flex;
   align-items: baseline;
-  gap: 8px;
+  gap: 12px;
 }
 
 .detail-header h1 .card-id {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .back-link {
   color: var(--muted);
   text-decoration: none;
   font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s;
 }
 
 .back-link:hover {
   color: var(--accent-hover);
+  background: var(--accent-light);
   text-decoration: none;
 }
 
 .back-link:visited {
   color: var(--muted);
+}
+
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  padding: 32px 0;
+  margin-bottom: 32px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--accent-light) 50%,
+    transparent
+  );
+  border-radius: 12px;
+}
+
+.profile-image {
+  max-width: 320px;
+  max-height: 320px;
+  width: auto;
+  height: auto;
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+  background: var(--card-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  .profile-image {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .detail-card {
@@ -364,13 +409,24 @@ header h1 {
 .variant-card-header {
   font-weight: 600;
   font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.variant-card-all-names {
+  font-size: 13px;
+  color: var(--muted);
   margin-bottom: 8px;
+  line-height: 1.4;
 }
 
 .variant-meta {
   font-size: 14px;
   color: var(--muted);
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.variant-meta-item {
+  line-height: 1.6;
 }
