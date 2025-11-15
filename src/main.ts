@@ -96,7 +96,7 @@ function render() {
     resultsEl.innerHTML = filtered
       .map((s) => {
         const name = s.names.en || Object.values(s.names)[0] || s.id;
-        const detailUrl = `/detail.html?category=singer&id=${encodeURIComponent(s.id)}`;
+        const detailUrl = `detail.html?category=singer&id=${encodeURIComponent(s.id)}`;
 
         // Collect all unique tags from variants
         const tagSet = new Set<string>();
@@ -128,7 +128,7 @@ function render() {
     resultsEl.innerHTML = filtered
       .map((s) => {
         const name = s.names.en || Object.values(s.names)[0] || s.id;
-        const detailUrl = `/detail.html?category=software&id=${encodeURIComponent(s.id)}`;
+        const detailUrl = `detail.html?category=software&id=${encodeURIComponent(s.id)}`;
 
         const tags = (s.tags || [])
           .map((t) => `<span class="tag">${t}</span>`)

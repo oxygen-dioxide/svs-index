@@ -36,7 +36,7 @@ function renderSinger(s: Singer) {
   app.innerHTML = `
     <header class="container detail-header">
       <h1>${s.names.en || s.id} <span class="card-id">@${s.id}</span></h1>
-      <a href="/" class="back-link">← Back to Index</a>
+      <a href="./" class="back-link">← Back to Index</a>
     </header>
     <section class="container">
       <div class="detail-card">
@@ -64,7 +64,7 @@ function renderSoftware(s: Software) {
   app.innerHTML = `
     <header class="container detail-header">
       <h1>${s.names.en || s.id} <span class="card-id">@${s.id}</span></h1>
-      <a href="/" class="back-link">← Back to Index</a>
+      <a href="./" class="back-link">← Back to Index</a>
     </header>
     <section class="container">
       <div class="detail-card">

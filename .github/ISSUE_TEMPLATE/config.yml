@@ -3,6 +3,3 @@ contact_links:
   - name: 📖 Documentation
     url: https://github.com/openutau/svs-index/blob/main/README.md
     about: Read the project documentation and contribution guide
-  - name: 💬 Discussions
-    url: https://github.com/openutau/svs-index/discussions
-    about: Ask questions and discuss ideas with the community

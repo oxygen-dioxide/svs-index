@@ -26,8 +26,7 @@ async function fetchJSON<T>(url: string): Promise<T | undefined> {
 async function ensureCategoryUpdated(category: Category): Promise<void> {
   const manifest = getManifest();
   const entries = category === 'singer' ? manifest.singers : manifest.softwares;
-  const basePath =
-    category === 'singer' ? '/data/singers/' : '/data/softwares/';
+  const basePath = category === 'singer' ? 'data/singers/' : 'data/softwares/';
 
   const changedFiles: string[] = [];
   for (const { file, hash } of entries) {

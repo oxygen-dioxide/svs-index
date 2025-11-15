@@ -2,7 +2,7 @@ name: Process Submission Issue
 
 on:
   issues:
-    types: [opened]
+    types: [opened, reopened]
 
 permissions:
   contents: write
@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install dependencies
         run: |
@@ -40,9 +40,9 @@ jobs:
         if: steps.process.outcome == 'success'
         uses: peter-evans/create-pull-request@v6
         with:
-          commit-message: 'Add submission from issue #${{ github.event.issue.number }}'
+          commit-message: "Add submission from issue #${{ github.event.issue.number }}"
           branch: submission-${{ github.event.issue.number }}
-          title: 'Submission: ${{ github.event.issue.title }}'
+          title: "Submission: ${{ github.event.issue.title }}"
           body: |
             Auto-generated PR from issue #${{ github.event.issue.number }}
 
