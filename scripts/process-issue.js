@@ -198,10 +198,10 @@ function buildSoftwareObject(data) {
 
   const homepage = cleanOptional(data.homepage_url);
   if (homepage) obj.homepage_url = homepage;
-  const dl = cleanOptional(data.download_url);
-  if (dl) obj.download_url = dl;
-  const mdl = cleanOptional(data.manual_download_url);
-  if (mdl) obj.manual_download_url = mdl;
+  const dl = cleanOptional(data.file_url);
+  if (dl) obj.file_url = dl;
+  const mdl = cleanOptional(data.download_page_url);
+  if (mdl) obj.download_page_url = mdl;
   if (data.tags) {
     obj.tags = data.tags
       .split(',')
@@ -390,13 +390,13 @@ async function main() {
 
   if (shouldValidate) {
     if (category === 'software') {
-      // Only validate direct download_url; manual link may be a landing page
-      await validateLink(obj.download_url, 'software.download_url');
+      // Only validate direct file_url; manual link may be a landing page
+      await validateLink(obj.file_url, 'software.file_url');
     } else {
       // Singer: check variant URLs
       for (let i = 0; i < (obj.variants || []).length; i++) {
         const v = obj.variants[i];
-        await validateLink(v.download_url, `variants[${i}].download_url`);
+        await validateLink(v.file_url, `variants[${i}].file_url`);
       }
     }
   }

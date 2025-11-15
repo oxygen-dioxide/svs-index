@@ -7,8 +7,8 @@ export interface NamesMap {
 export interface SingerVariant {
   id: string;
   names: NamesMap;
-  download_url: string | null;
-  manual_download_url: string | null;
+  file_url: string | null;
+  download_page_url: string | null;
   tags?: string[];
 }
 
@@ -30,8 +30,8 @@ export interface Software {
   category: SoftwareCategory;
   developers: string[];
   homepage_url?: string;
-  download_url?: string | null;
-  manual_download_url?: string | null;
+  file_url?: string | null;
+  download_page_url?: string | null;
   tags?: string[];
 }
 

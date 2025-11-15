@@ -34,8 +34,8 @@ function renderSinger(s: Singer) {
         ${vAllNames ? `<div class="variant-card-all-names">${vAllNames}</div>` : ''}
         <div class="variant-meta">
           ${v.tags && v.tags.length ? `<div class="variant-meta-item">Tags: ${v.tags.map((t) => `<span class="tag">${t}</span>`).join(' ')}</div>` : ''}
-          ${v.download_url ? `<div class="variant-meta-item">Direct download: ${link(v.download_url)}</div>` : ''}
-          ${v.manual_download_url ? `<div class="variant-meta-item">Manual download: ${link(v.manual_download_url)}</div>` : ''}
+          ${v.download_page_url ? `<div class="variant-meta-item">Download page: ${link(v.download_page_url)}</div>` : ''}
+          ${v.file_url ? `<div class="variant-meta-item">Direct download: ${link(v.file_url)}</div>` : ''}
         </div>
       </div>`;
     })
@@ -89,8 +89,8 @@ function renderSoftware(s: Software) {
           <div><strong>Category</strong></div><div>${s.category}</div>
           <div><strong>Developers</strong></div><div>${s.developers.join(', ')}</div>
           ${s.tags?.length ? `<div><strong>Tags</strong></div><div>${s.tags.map((t) => `<span class="tag">${t}</span>`).join(' ')}</div>` : ''}
-          ${s.download_url ? `<div><strong>Direct download: </strong></div><div>${link(s.download_url)}</div>` : ''}
-          ${s.manual_download_url ? `<div><strong>Manual download: </strong></div><div>${link(s.manual_download_url)}</div>` : ''}
+          ${s.download_page_url ? `<div><strong>Download page: </strong></div><div>${link(s.download_page_url)}</div>` : ''}
+          ${s.file_url ? `<div><strong>Direct download: </strong></div><div>${link(s.file_url)}</div>` : ''}
         </div>
       </div>
       <div class="detail-card">

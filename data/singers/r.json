@@ -18,8 +18,8 @@
           "en": "Ritsu Namine CRISSCROSS",
           "ja": "波音リツ CRISSCROSS"
         },
-        "download_url": "https://www.canon-voice.com/voice/ENUNU_%E6%B3%A2%E9%9F%B3%E3%83%AA%E3%83%84CC_4230_5styles_WD_HN-uSFGAN_BEAT.zip",
-        "manual_download_url": "https://www.canon-voice.com/voicebanks/",
+        "file_url": "https://www.canon-voice.com/voice/ENUNU_%E6%B3%A2%E9%9F%B3%E3%83%AA%E3%83%84CC_4230_5styles_WD_HN-uSFGAN_BEAT.zip",
+        "download_page_url": "https://www.canon-voice.com/voicebanks/",
         "tags": [
           "nnsvs"
         ]
@@ -30,8 +30,8 @@
           "en": "Ritsu Namine ACE",
           "ja": "波音リツ ACE"
         },
-        "download_url": null,
-        "manual_download_url": null,
+        "file_url": null,
+        "download_page_url": null,
         "tags": [
           "ace-studio"
         ]
@@ -42,8 +42,8 @@
           "en": "Ritsu Namine Something is Wrong",
           "ja": "波音リツ 何かがキレ"
         },
-        "download_url": "https://www.canon-voice.com/voice/r73_nanika0.1.1.zip",
-        "manual_download_url": "https://www.canon-voice.com/voicebanks/",
+        "file_url": "https://www.canon-voice.com/voice/r73_nanika0.1.1.zip",
+        "download_page_url": "https://www.canon-voice.com/voicebanks/",
         "tags": [
           "utau"
         ]
@@ -54,8 +54,8 @@
           "en": "Ritsu Namine Kire",
           "ja": "波音リツ キレ"
         },
-        "download_url": "https://www.canon-voice.com/voice/r73_kire_ren0100.zip",
-        "manual_download_url": "https://www.canon-voice.com/voicebanks/",
+        "file_url": "https://www.canon-voice.com/voice/r73_kire_ren0100.zip",
+        "download_page_url": "https://www.canon-voice.com/voicebanks/",
         "tags": [
           "utau",
           "vcv",
@@ -68,8 +68,8 @@
           "en": "Ritsu Namine Strong",
           "ja": "波音リツ 強"
         },
-        "download_url": "https://www.canon-voice.com/voice/r73_strong_ren0151.zip",
-        "manual_download_url": "https://www.canon-voice.com/voicebanks/",
+        "file_url": "https://www.canon-voice.com/voice/r73_strong_ren0151.zip",
+        "download_page_url": "https://www.canon-voice.com/voicebanks/",
         "tags": [
           "utau"
         ]
@@ -80,8 +80,8 @@
           "en": "Ritsu Namine Eve",
           "ja": "波音リツ Eve"
         },
-        "download_url": "https://www.canon-voice.com/voice/r73_eve.zip",
-        "manual_download_url": "https://www.canon-voice.com/voicebanks/",
+        "file_url": "https://www.canon-voice.com/voice/r73_eve.zip",
+        "download_page_url": "https://www.canon-voice.com/voicebanks/",
         "tags": [
           "utau",
           "cvvc"
@@ -93,8 +93,8 @@
           "en": "Ritsu Namine Normal (Weak)",
           "ja": "波音リツ 通常(弱)"
         },
-        "download_url": "https://www.canon-voice.com/voice/r73_normal_ren0151.zip",
-        "manual_download_url": "https://www.canon-voice.com/voicebanks/",
+        "file_url": "https://www.canon-voice.com/voice/r73_normal_ren0151.zip",
+        "download_page_url": "https://www.canon-voice.com/voicebanks/",
         "tags": [
           "utau"
         ]
@@ -105,8 +105,8 @@
           "en": "Ritsu Namine Bright & Beautiful",
           "ja": "波音リツ 眩＆麗"
         },
-        "download_url": "https://www.canon-voice.com/voice/r73_mabayu_uruha.zip",
-        "manual_download_url": "https://www.canon-voice.com/voicebanks/",
+        "file_url": "https://www.canon-voice.com/voice/r73_mabayu_uruha.zip",
+        "download_page_url": "https://www.canon-voice.com/voicebanks/",
         "tags": [
           "utau"
         ]

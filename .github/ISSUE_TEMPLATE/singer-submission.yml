@@ -73,8 +73,8 @@ body:
         List of voicebank variants in JSON array format. Each variant must have:
         - id: unique identifier
         - names: object with at least 'en' key
-        - download_url: direct download link or null
-        - manual_download_url: manual download page or null
+        - download_page_url: manual download page or null. This can be your official download page or a file hosting site.
+        - file_url: direct download link or null, this link must directly link to the file, not a page. If you don't want to provide a direct link, use null here and provide a download_page_url.
         - tags: optional array of tags
       render: json
     validations:

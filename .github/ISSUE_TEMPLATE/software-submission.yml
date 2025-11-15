@@ -64,16 +64,16 @@ body:
       description: "Official homepage (optional)"
 
   - type: input
-    id: download_url
+    id: download_page_url
     attributes:
-      label: Download URL
-      description: "Direct download link (optional, use null if not available)"
+      label: Download Page URL
+      description: "Manual download page (optional, use null if not available)"
 
   - type: input
-    id: manual_download_url
+    id: file_url
     attributes:
-      label: Manual Download URL
-      description: "Manual download page (optional, use null if not available)"
+      label: Direct Download URL
+      description: "Direct download link (optional, use null if not available)"
 
   - type: input
     id: tags

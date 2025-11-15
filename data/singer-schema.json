@@ -64,8 +64,8 @@
                     "required": [
                         "id",
                         "names",
-                        "download_url",
-                        "manual_download_url"
+                        "file_url",
+                        "download_page_url"
                     ],
                     "properties": {
                         "id": {
@@ -84,7 +84,7 @@
                                 "type": "string"
                             }
                         },
-                        "download_url": {
+                        "file_url": {
                             "description": "Direct link for official software download, or null if not applicable.",
                             "type": [
                                 "string",
@@ -92,7 +92,7 @@
                             ],
                             "format": "uri"
                         },
-                        "manual_download_url": {
+                        "download_page_url": {
                             "description": "Link to the file host page requiring manual user interaction for download, or null.",
                             "type": [
                                 "string",

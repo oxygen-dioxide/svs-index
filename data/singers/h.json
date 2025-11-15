@@ -22,8 +22,8 @@
                     "ja": "初音ミク V4 CHINESE",
                     "zh": "初音未来 V4 CHINESE"
                 },
-                "download_url": null,
-                "manual_download_url": null,
+                "file_url": null,
+                "download_page_url": null,
                 "tags": [
                     "vocaloid"
                 ]
@@ -35,8 +35,8 @@
                     "ja": "初音ミク V4X",
                     "zh": "初音未来 V4X"
                 },
-                "download_url": null,
-                "manual_download_url": null,
+                "file_url": null,
+                "download_page_url": null,
                 "tags": [
                     "vocaloid"
                 ]
@@ -48,8 +48,8 @@
                     "ja": "初音ミク V4X ENGLISH",
                     "zh": "初音未来 V4X ENGLISH"
                 },
-                "download_url": null,
-                "manual_download_url": null,
+                "file_url": null,
+                "download_page_url": null,
                 "tags": [
                     "vocaloid"
                 ]
@@ -61,8 +61,8 @@
                     "ja": "初音ミク V3",
                     "zh": "初音未来 V3"
                 },
-                "download_url": null,
-                "manual_download_url": null,
+                "file_url": null,
+                "download_page_url": null,
                 "tags": [
                     "vocaloid"
                 ]
@@ -74,8 +74,8 @@
                     "ja": "初音ミク V3 ENGLISH",
                     "zh": "初音未来 V3 ENGLISH"
                 },
-                "download_url": null,
-                "manual_download_url": null,
+                "file_url": null,
+                "download_page_url": null,
                 "tags": [
                     "vocaloid"
                 ]
@@ -87,8 +87,8 @@
                     "ja": "初音ミク Append",
                     "zh": "初音未来 Append"
                 },
-                "download_url": null,
-                "manual_download_url": null,
+                "file_url": null,
+                "download_page_url": null,
                 "tags": [
                     "vocaloid"
                 ]
@@ -100,8 +100,8 @@
                     "ja": "VOCALOID2 初音ミク",
                     "zh": "VOCALOID2 初音未来"
                 },
-                "download_url": null,
-                "manual_download_url": null,
+                "file_url": null,
+                "download_page_url": null,
                 "tags": [
                     "vocaloid"
                 ]
