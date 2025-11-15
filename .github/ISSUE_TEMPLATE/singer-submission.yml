@@ -1,0 +1,103 @@
+name: New Singer Submission
+description: Submit a new singer/voicebank to the SVS Index
+title: "[Singer] "
+labels: ["submission", "singer"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing! Please fill out all required fields below.
+        All submissions will be reviewed before merging.
+
+  - type: input
+    id: id
+    attributes:
+      label: Unique ID
+      description: "Lowercase, hyphenated identifier (e.g., hatsune-miku)"
+      placeholder: "hatsune-miku"
+    validations:
+      required: true
+
+  - type: input
+    id: name_en
+    attributes:
+      label: Name (English)
+      description: "English name of the singer"
+      placeholder: "Hatsune Miku"
+    validations:
+      required: true
+
+  - type: input
+    id: name_ja
+    attributes:
+      label: Name (Japanese)
+      description: "Japanese name (optional)"
+      placeholder: "初音ミク"
+
+  - type: input
+    id: name_zh
+    attributes:
+      label: Name (Chinese)
+      description: "Chinese name (optional)"
+      placeholder: "初音未来"
+
+  - type: textarea
+    id: owners
+    attributes:
+      label: Owners
+      description: "List of owners, one per line"
+      placeholder: |
+        Crypton Future Media, INC.
+    validations:
+      required: true
+
+  - type: textarea
+    id: authors
+    attributes:
+      label: Authors
+      description: "List of authors/voice providers, one per line"
+      placeholder: |
+        Crypton Future Media, INC.
+    validations:
+      required: true
+
+  - type: input
+    id: homepage_url
+    attributes:
+      label: Homepage URL
+      description: "Official homepage (optional)"
+      placeholder: "https://piapro.net/"
+
+  - type: input
+    id: profile_image_url
+    attributes:
+      label: Profile Image URL
+      description: "Direct link to profile image (optional)"
+      placeholder: "https://piapro.net/intl/images/btn_miku.jpg"
+
+  - type: textarea
+    id: variants
+    attributes:
+      label: Variants (JSON)
+      description: |
+        List of voicebank variants in JSON array format. Each variant must have:
+        - id: unique identifier
+        - names: object with at least 'en' key
+        - download_url: direct download link or null
+        - manual_download_url: manual download page or null
+        - tags: optional array of tags
+      placeholder: |
+        [
+          {
+            "id": "hatsune-miku-v4x",
+            "names": {
+              "en": "HATSUNE MIKU V4X"
+            },
+            "download_url": null,
+            "manual_download_url": null,
+            "tags": ["v4"]
+          }
+        ]
+      render: json
+    validations:
+      required: true

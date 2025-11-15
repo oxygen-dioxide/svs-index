@@ -1,0 +1,76 @@
+name: Process Submission Issue
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  process:
+    if: contains(github.event.issue.labels.*.name, 'submission')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          npm install --no-save ajv ajv-formats
+
+      - name: Process issue
+        id: process
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: node scripts/process-issue.js
+        continue-on-error: true
+
+      - name: Create Pull Request
+        if: steps.process.outcome == 'success'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: 'Add submission from issue #${{ github.event.issue.number }}'
+          branch: submission-${{ github.event.issue.number }}
+          title: 'Submission: ${{ github.event.issue.title }}'
+          body: |
+            Auto-generated PR from issue #${{ github.event.issue.number }}
+
+            Please review the changes before merging.
+
+            Closes #${{ github.event.issue.number }}
+          labels: submission
+
+      - name: Comment on success
+        if: steps.process.outcome == 'success'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ Thank you for your submission! A pull request has been created automatically. It will be reviewed shortly.'
+            })
+
+      - name: Comment on failure
+        if: steps.process.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '❌ There was an error processing your submission. Please check the validation errors in the Actions log and update your submission.'
+            })
