@@ -1,0 +1,32 @@
+[
+  {
+    "id": "zhibin",
+    "names": {
+      "en": "Zhibin",
+      "zh": "挚彬"
+    },
+    "owners": [
+      "赤松_Akamatsu"
+    ],
+    "authors": [
+      "赤松_Akamatsu"
+    ],
+    "variants": [
+      {
+        "id": "zhibin-diffsinger",
+        "names": {
+          "en": "Zhibin DiffSinger",
+          "zh": "挚彬 DiffSinger"
+        },
+        "download_page_url": "https://pan.quark.cn/s/254f030af8cb",
+        "file_url": null,
+        "tags": [
+          "diffsinger",
+          "zh"
+        ]
+      }
+    ],
+    "homepage_url": "https://zhibin.club/#singers",
+    "profile_image_url": "https://cloud.zhibin.club/uploads/images/20250828/20250828222529b28c58125.png"
+  }
+]
