@@ -103,6 +103,39 @@ function buildSingerObject(data) {
     return s;
   }
 
+  // Check if we have the new format (single singer_json field)
+  if (data.singer_json) {
+    try {
+      const cleaned = stripCodeFence(data.singer_json);
+      const obj = RJSON.parse(cleaned);
+      
+      // Validate required fields
+      if (!obj.id) {
+        throw new Error('Missing required field: id (Unique ID). Please provide a stable identifier.');
+      }
+      if (!obj.names || !obj.names.en) {
+        throw new Error('Missing required field: names.en (English name).');
+      }
+      if (!obj.variants || !Array.isArray(obj.variants) || obj.variants.length === 0) {
+        throw new Error('Missing required field: variants. Must be a non-empty array.');
+      }
+      
+      return obj;
+    } catch (e) {
+      const err = new Error(
+        'Invalid JSON in "Singer JSON" field. ' +
+        (e && e.message ? e.message : String(e))
+      );
+      err.details = {
+        parseError: e && e.message ? e.message : String(e),
+        field: 'singer_json',
+        snippet: String(data.singer_json || '').slice(0, 2000)
+      };
+      throw err;
+    }
+  }
+
+  // Legacy format support (individual fields)
   // Names (set only when meaningful; drop "_No response_")
   const enName = cleanOptional(data.name_english || data.name_en);
   const names = {};
