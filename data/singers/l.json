@@ -103,5 +103,34 @@
     ],
     "homepage_url": "https://wik-wav.neocities.org/Lem",
     "profile_image_url": "https://wik-wav.neocities.org/content/Lem_Pfp.jpg"
+  },
+  {
+    "id": "lingyuan-yousa",
+    "names": {
+      "en": "Lingyuan Yousa",
+      "zh": "泠鸢yousa"
+    },
+    "owners": [
+      "泠鸢yousa"
+    ],
+    "authors": [
+      "泠鸢yousa"
+    ],
+    "variants": [
+      {
+        "id": "lingyuan-yousa-diffsinger-1-5-2",
+        "names": {
+          "zh": "泠鸢yousa DiffSinger 1.5.2",
+          "en": "Lingyuan Yousa DiffSinger 1.5.2"
+        },
+        "file_url": "https://github.com/yousa-ling-official-production/yousa-ling-diffsinger-v1/releases/download/v1.5.2/yousaV1.52.zip",
+        "download_page_url": "https://github.com/yousa-ling-official-production/yousa-ling-diffsinger-v1/releases/tag/v1.5.2",
+        "tags": [
+          "diffsinger",
+          "zh"
+        ]
+      }
+    ],
+    "homepage_url": "https://github.com/yousa-ling-official-production"
   }
 ]
