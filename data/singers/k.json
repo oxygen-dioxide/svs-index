@@ -231,5 +231,39 @@
     ],
     "homepage_url": "https://kasaneteto.jp/utau/",
     "profile_image_url": "https://kasanete.to/imgcompress/keyart/1.avif"
+  },
+  {
+    "id": "kyoumishii",
+    "names": {
+      "en": "Kyoumishii"
+    },
+    "owners": [
+      "Team Brapa",
+      "Spaceyxuu"
+    ],
+    "authors": [
+      "Spaceyxuu"
+    ],
+    "variants": [
+      {
+        "id": "kyoumishii-beta",
+        "names": {
+          "en": "Kyoumishii Beta"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.teambrapa.com.br/beta",
+        "tags": [
+          "diffsinger",
+          "openutau",
+          "portuguese",
+          "english",
+          "japanese",
+          "spanish",
+          "male"
+        ]
+      }
+    ],
+    "homepage_url": "https://www.teambrapa.com.br/kyoumishii#voicebanks",
+    "profile_image_url": "https://static.wixstatic.com/media/ca7bab_3b55c652ea714f2ca83dab9a024f2bb9~mv2.png/v1/fill/w_360,h_360,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/pic_voice_kyoumishii.png"
   }
 ]
