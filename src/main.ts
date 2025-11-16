@@ -17,7 +17,7 @@ app.innerHTML = `
       <h1>SVS Index</h1>
       <p class="subtitle">Community maintained index of Singing Voice Synthesis singers and softwares</p>
       <div class="header-links">
-        <a href="https://github.com/openutau/svs-index/issues/new?template=singer-submission.yml" target="_blank">Submit Singer</a>
+        <a href="submit.html">Submit Singer</a>
         <span class="separator">|</span>
         <a href="https://github.com/openutau/svs-index/issues/new?template=software-submission.yml" target="_blank">Submit Software</a>
       </div>

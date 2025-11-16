@@ -9,6 +9,7 @@ export default defineConfig({
       input: {
         index: resolve(__dirname, 'index.html'),
         detail: resolve(__dirname, 'detail.html'),
+        submit: resolve(__dirname, 'submit.html'),
       },
     },
   },

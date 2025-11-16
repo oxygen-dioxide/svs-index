@@ -6,76 +6,51 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for contributing! Please fill out all required fields below.
-        All submissions will be reviewed before merging.
-
-  - type: input
-    id: id
-    attributes:
-      label: Unique ID
-      description: "Lowercase, hyphenated identifier (e.g., hatsune-miku)"
-    validations:
-      required: true
-
-  - type: input
-    id: name_en
-    attributes:
-      label: Name (English)
-      description: "English name of the singer"
-    validations:
-      required: true
-
-  - type: input
-    id: name_ja
-    attributes:
-      label: Name (Japanese)
-      description: "Japanese name (optional)"
-
-  - type: input
-    id: name_zh
-    attributes:
-      label: Name (Chinese)
-      description: "Chinese name (optional)"
+        Thank you for contributing! 
+        
+        **Use the [Singer Editor](https://openutau.github.io/svs-index/submit.html) to generate valid JSON**, then paste it below.
+        
+        The editor helps you:
+        - Validate all required fields
+        - Check singer ID uniqueness
+        - Ensure proper JSON structure
+        - Avoid common mistakes
 
   - type: textarea
-    id: owners
+    id: singer_json
     attributes:
-      label: Owners
-      description: "List of owners, one per line"
-    validations:
-      required: true
-
-  - type: textarea
-    id: authors
-    attributes:
-      label: Authors
-      description: "List of authors/voice providers, one per line"
-    validations:
-      required: true
-
-  - type: input
-    id: homepage_url
-    attributes:
-      label: Homepage URL
-      description: "Official homepage (optional)"
-
-  - type: input
-    id: profile_image_url
-    attributes:
-      label: Profile Image URL
-      description: "Direct link to profile image (optional)"
-
-  - type: textarea
-    id: variants
-    attributes:
-      label: Variants (JSON)
+      label: Singer JSON
       description: |
-        List of voicebank variants in JSON array format. Each variant must have:
-        - id: unique identifier
+        Complete singer object in JSON format. Must include:
+        - id: unique hyphenated identifier (5+ chars, lowercase)
         - names: object with at least 'en' key
-        - download_page_url: manual download page or null. This can be your official download page or a file hosting site.
-        - file_url: direct download link or null, this link must directly link to the file, not a page. If you don't want to provide a direct link, use null here and provide a download_page_url.
-        - tags: optional array of tags
+        - owners: array of owner names
+        - authors: array of author/voice provider names
+        - variants: array of variant objects (each with id, names, and at least one URL)
+        - homepage_url (optional)
+        - profile_image_url (optional)
+      placeholder: |
+        {
+          "id": "hatsune-miku",
+          "names": {
+            "en": "Hatsune Miku",
+            "ja": "初音ミク"
+          },
+          "owners": ["Crypton Future Media"],
+          "authors": ["Saki Fujita"],
+          "homepage_url": "https://ec.crypton.co.jp/pages/prod/vocaloid/cv01",
+          "variants": [
+            {
+              "id": "hatsune-miku-v4x",
+              "names": {
+                "en": "Hatsune Miku V4X"
+              },
+              "file_url": null,
+              "download_page_url": "https://ec.crypton.co.jp/pages/prod/vocaloid/cv01",
+              "tags": ["vocaloid4"]
+            }
+          ]
+        }
       render: json
     validations:
       required: true

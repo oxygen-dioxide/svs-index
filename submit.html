@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <title>Singer Editor - SVS Index</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Singer Editor</h1>
+        <p class="subtitle">Create complete singer JSON for submission</p>
+        <nav>
+          <a href="index.html">← Back to Index</a>
+          <button id="reset-form" class="btn btn-secondary">🔄 Reset Form</button>
+        </nav>
+      </header>
+
+      <main class="steps">
+        <!-- Step 1: Singer Info -->
+        <section class="step" id="step-1">
+          <div class="step-header">
+            <div class="step-number">1</div>
+            <h2>Singer Information</h2>
+          </div>
+          <p class="step-intro">Provide the basic information for the new singer.</p>
+          
+          <div class="form-group">
+            <label for="singer-id">Singer ID <span class="required">*</span></label>
+            <input id="singer-id" type="text" placeholder="e.g., hatsune-miku" autocomplete="off" />
+            <small>Lowercase letters and numbers separated by hyphens. Must be at least 5 characters and not already used.</small>
+          </div>
+          <div id="singer-id-status" class="singer-id-status"></div>
+
+          <div class="form-group">
+            <label>Singer Names <span class="required">*</span></label>
+            <div id="singer-names-container" class="names-container">
+              <div class="name-pair">
+                <input type="text" class="singer-name-lang" placeholder="en" value="en" />
+                <input type="text" class="singer-name-value" placeholder="English name" />
+                <button class="btn-icon btn-remove-singer-name" title="Remove name">✕</button>
+              </div>
+              <div class="name-pair">
+                <input type="text" class="singer-name-lang" placeholder="ja" value="ja" />
+                <input type="text" class="singer-name-value" placeholder="Japanese name (optional)" />
+                <button class="btn-icon btn-remove-singer-name" title="Remove name">✕</button>
+              </div>
+              <div class="name-pair">
+                <input type="text" class="singer-name-lang" placeholder="zh" value="zh" />
+                <input type="text" class="singer-name-value" placeholder="Chinese name (optional)" />
+                <button class="btn-icon btn-remove-singer-name" title="Remove name">✕</button>
+              </div>
+            </div>
+            <button class="btn-small" id="add-singer-name">+ Add Name</button>
+            <small>At least an English name (en) is required.</small>
+          </div>
+
+          <div class="form-group">
+            <label>Owners <span class="required">*</span></label>
+            <div id="owners-container" class="list-container"></div>
+            <button class="btn-small" id="add-owner">+ Add Owner</button>
+            <small>List of copyright owners (e.g., company names).</small>
+          </div>
+
+          <div class="form-group">
+            <label>Authors <span class="required">*</span></label>
+            <div id="authors-container" class="list-container"></div>
+            <button class="btn-small" id="add-author">+ Add Author</button>
+            <small>List of voice providers or creators.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="homepage-url">Homepage URL</label>
+            <input id="homepage-url" type="url" placeholder="https://example.com" />
+            <small>Official website (optional).</small>
+          </div>
+
+          <div class="form-group">
+            <label for="profile-image-url">Profile Image URL</label>
+            <input id="profile-image-url" type="url" placeholder="https://example.com/image.png" />
+            <small>Direct link to profile image (optional).</small>
+          </div>
+        </section>
+
+        <!-- Step 2: Variants -->
+        <section class="step" id="step-2">
+          <div class="step-header">
+            <div class="step-number">2</div>
+            <h2>Define Variants</h2>
+          </div>
+          <p class="step-intro">Add one or more voicebank variants. Variant IDs must start with the singer ID (e.g., <code>singer-id-v1</code>). Each variant must include an English name and at least one of File URL or Download Page URL.</p>
+          <div class="form-header variant-actions">
+            <button id="add-variant" class="btn btn-primary">+ Add Variant</button>
+          </div>
+          <div id="variants-container"></div>
+        </section>
+
+        <!-- Step 3: Generate JSON -->
+        <section class="step" id="step-3">
+          <div class="step-header">
+            <div class="step-number">3</div>
+            <h2>Copy JSON & Submit GitHub Issue</h2>
+          </div>
+          <p class="step-intro">When all fields are valid, copy the complete singer JSON and paste it into the "Singer JSON" field of the GitHub issue.</p>
+          <div class="output-header">
+            <h3 class="output-title">Singer JSON Preview</h3>
+            <div class="output-actions">
+              <button id="copy-json" class="btn btn-primary" disabled>📋 Copy JSON</button>
+              <a class="btn btn-secondary" id="go-to-issue" target="_blank" rel="noopener" href="https://github.com/openutau/svs-index/issues/new?template=singer-submission.yml">↗ Open Issue Form</a>
+            </div>
+          </div>
+          <div class="validation-status" id="validation-status"></div>
+          <pre id="json-output" class="json-preview"><code>// Complete steps 1 and 2 to generate JSON</code></pre>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/src/submit.ts"></script>
+  </body>
+</html>
