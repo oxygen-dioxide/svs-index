@@ -1,0 +1,97 @@
+[
+  {
+    "id": "namae-shizeru",
+    "names": {
+      "en": "Namae Shizeru",
+      "ja": "名前シレズ"
+    },
+    "owners": [
+      "kuzutokaze"
+    ],
+    "authors": [
+      "kurukuru2suuzi"
+    ],
+    "variants": [
+      {
+        "id": "namae-shizeru-basic",
+        "names": {
+          "en": "Namae Shizeru",
+          "ja": "名前シレズ"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/130953",
+        "tags": [
+          "utau",
+          "monopitch",
+          "vcv",
+          "vcv with vc's",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "namae-shizeru-18-37",
+        "names": {
+          "en": "Namae Shizeru【18-37】",
+          "ja": "名前シレズ【18-37】"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/161141",
+        "tags": [
+          "utau",
+          "monopitch",
+          "vcv",
+          "vcv + b whatever that means",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "namae-shizeru-16-97",
+        "names": {
+          "en": "Namae Shizeru【16-97】",
+          "ja": "名前シレズ【16-97】"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/192066",
+        "tags": [
+          "utau",
+          "monopitch",
+          "vcv",
+          "vcv + vc",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "namae-shizeru-19-18",
+        "names": {
+          "en": "Namae Shizeru【19-18】",
+          "ja": "名前シレズ【19-18】"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/220325",
+        "tags": [
+          "utau",
+          "monopitch",
+          "vcv",
+          "vcv + b whatever that means",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "namae-shizeru-18-45",
+        "names": {
+          "en": "Namae Shizeru【18-45】",
+          "ja": "名前シレズ【18-45】"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/161142",
+        "tags": [
+          "utau",
+          "multipitch",
+          "cvvc",
+          "kana aliased"
+        ]
+      }
+    ],
+    "homepage_url": "https://kurukuru2suuzi.wixsite.com/kuzutokaze/%E5%90%8D%E5%89%8D%E3%82%B7%E3%83%AC%E3%82%BAdl?lang=en"
+  }
+]
