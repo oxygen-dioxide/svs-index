@@ -540,5 +540,158 @@
       }
     ],
     "homepage_url": "https://kurukuru2suuzi.wixsite.com/kuzutokaze/%E3%82%AB%E3%82%BC%E3%83%92%E3%82%ADdl?lang=en"
+  },
+  {
+    "id": "kikyuune-aiko",
+    "names": {
+      "en": "Kikyuune Aiko",
+      "ja": "気球音アイコ"
+    },
+    "owners": [
+      "Studio VOXYZ"
+    ],
+    "authors": [
+      "MystSaphyr"
+    ],
+    "variants": [
+      {
+        "id": "kikyuune-aiko-slipstream-vcv-jp",
+        "names": {
+          "en": "Slipstream VCV JP"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1K76dyvDYZYhr0W0dOsElS2K__ymRL0qX/view?usp=drive_link",
+        "tags": [
+          "utau",
+          "japanese",
+          "vcv"
+        ]
+      },
+      {
+        "id": "kikyuune-aiko-rockloud-cvvc-en",
+        "names": {
+          "en": "RockLoud CVVC EN"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/17zV9aAt3si9X33544xCvQ2Iutk-DopLk/view?usp=sharing",
+        "tags": [
+          "utau",
+          "english",
+          "cvvc"
+        ]
+      },
+      {
+        "id": "kikyuune-aiko-rockloud-cvvc-jp",
+        "names": {
+          "en": "RockLoud CVVC JP"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1qtHO1YaANGYq-IqdZLB9oE1IRA0fPGKv/view?usp=sharing",
+        "tags": [
+          "utau",
+          "japanese",
+          "cvvc"
+        ]
+      },
+      {
+        "id": "kikyuune-aiko-balladsoft-cv-vv-jp",
+        "names": {
+          "en": "BalladSoft CV-VV JP"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1GxFmPADGbrwmH1-5zeG03juGR_qqyoEF/view?usp=sharing",
+        "tags": [
+          "utau",
+          "japanese",
+          "cv-vv",
+          "cv",
+          "soft"
+        ]
+      },
+      {
+        "id": "kikyuune-aiko-rockloud-cv-vv-jp",
+        "names": {
+          "en": "RockLoud CV-VV JP"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1BNiOmhtHMCwNvcE6IBPeXI8ujJJpUp56/view?usp=sharing",
+        "tags": [
+          "utau",
+          "japanese",
+          "cv-vv",
+          "cv"
+        ]
+      },
+      {
+        "id": "kikyuune-aiko-rockloud-cv-jp",
+        "names": {
+          "en": "RockLoud CV JP"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1U9oyZy_0O_gVPK3iBY52qXhPym-3irBX/view?usp=sharing",
+        "tags": [
+          "utau",
+          "japanese",
+          "cv"
+        ]
+      },
+      {
+        "id": "kikyuune-aiko-soft-append-cv-jp",
+        "names": {
+          "en": "SOFT Append CV JP"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1J_JhXEmoJT_BNLTys5S3AmRyUubJFatd/view?usp=sharing",
+        "tags": [
+          "utau",
+          "japanese",
+          "cv",
+          "soft"
+        ]
+      },
+      {
+        "id": "kikyuune-aiko-act3-cv-jp-en",
+        "names": {
+          "en": "ACT3 CV JP+EN"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1Apit-LZh5pwJfNsmCwfRdupB0UtU4xSw/view?usp=sharing",
+        "tags": [
+          "utau",
+          "japanese",
+          "english",
+          "cv"
+        ]
+      },
+      {
+        "id": "kikyuune-aiko-act2-cv-jp-en",
+        "names": {
+          "en": "ACT2 CV JP+EN"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1yOiuUxNwohsSq1V2aY0Mc2rvVEStjNay/view?usp=sharing",
+        "tags": [
+          "utau",
+          "japanese",
+          "english",
+          "cv"
+        ]
+      },
+      {
+        "id": "kikyuune-aiko-act1-revival-cv-jp",
+        "names": {
+          "en": "ACT1 「Revival」CV JP"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1yOiuUxNwohsSq1V2aY0Mc2rvVEStjNay/view?usp=sharing",
+        "tags": [
+          "utau",
+          "japanese",
+          "cv"
+        ]
+      }
+    ],
+    "homepage_url": "https://studiovo.xyz/voices/kikyuune-aiko/",
+    "profile_image_url": "https://studiovo.xyz/wp-content/uploads/2023/12/aiko2022-609x1024.png"
   }
 ]
