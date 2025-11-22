@@ -56,9 +56,11 @@ Software can be categorized as:
 ### Tags
 
 Use tags to add searchable metadata:
-- Engine types: `vocaloid`, `utau`, `synthesizer-v`, `diffsinger`
-- Language: `en`, `ja`, `zh`
+- Engine types: `vocaloid`, `utau`, `synthesizer-v`, `diffsinger`, etc.
+- Language: `lang:en`, `lang:ja`, `lang:zh` (see [ISO 639 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes))
+- UTAU specific: `multipitch`, `vcv`, `arpasing`, etc.
 - License: `commercial`, `free`, `open-source`
+- Misc: `bundle`, `female`, `male`, etc.
 
 ## License
 
