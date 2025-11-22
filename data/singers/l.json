@@ -23,7 +23,7 @@
         "tags": [
           "utau",
           "cvvc",
-          "ja"
+          "lang:ja"
         ]
       },
       {
@@ -37,7 +37,7 @@
         "tags": [
           "utau",
           "cvvc",
-          "ja"
+          "lang:ja"
         ]
       },
       {
@@ -51,7 +51,7 @@
         "tags": [
           "utau",
           "cvvc",
-          "ja"
+          "lang:ja"
         ]
       },
       {
@@ -66,8 +66,8 @@
           "utau",
           "vccv",
           "cvvc",
-          "en",
-          "ja"
+          "lang:en",
+          "lang:ja"
         ]
       },
       {
@@ -82,7 +82,7 @@
           "utau",
           "cvvc",
           "vcv",
-          "ja"
+          "lang:ja"
         ]
       },
       {
@@ -95,9 +95,9 @@
         "download_page_url": "https://wik-wav.neocities.org/lem_downloads",
         "tags": [
           "diffsinger",
-          "en",
-          "ja",
-          "pl"
+          "lang:en",
+          "lang:ja",
+          "lang:pl"
         ]
       }
     ],
@@ -127,7 +127,7 @@
         "download_page_url": "https://github.com/yousa-ling-official-production/yousa-ling-diffsinger-v1/releases/tag/v1.5.2",
         "tags": [
           "diffsinger",
-          "zh"
+          "lang:zh"
         ]
       }
     ],

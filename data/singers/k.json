@@ -24,7 +24,7 @@
         "download_page_url": null,
         "tags": [
           "utau",
-          "japanese",
+          "lang:ja",
           "all voice colors"
         ]
       },
@@ -38,7 +38,7 @@
         "download_page_url": null,
         "tags": [
           "utau",
-          "japanese",
+          "lang:ja",
           "single \"default\" voicebank"
         ]
       },
@@ -52,7 +52,7 @@
         "download_page_url": null,
         "tags": [
           "utau",
-          "japanese",
+          "lang:ja",
           "single voice color"
         ]
       },
@@ -66,7 +66,7 @@
         "download_page_url": null,
         "tags": [
           "utau",
-          "japanese",
+          "lang:ja",
           "extras"
         ]
       },
@@ -80,7 +80,7 @@
         "download_page_url": null,
         "tags": [
           "utau",
-          "japanese",
+          "lang:ja",
           "single voice color"
         ]
       },
@@ -103,7 +103,7 @@
         "download_page_url": null,
         "tags": [
           "utau",
-          "japanese",
+          "lang:ja",
           "single voice color"
         ]
       },
@@ -117,7 +117,7 @@
         "download_page_url": null,
         "tags": [
           "utau",
-          "japanese",
+          "lang:ja",
           "single voice color"
         ]
       },
@@ -131,7 +131,7 @@
         "download_page_url": null,
         "tags": [
           "utau",
-          "japanese",
+          "lang:ja",
           "single voice color"
         ]
       },
@@ -145,7 +145,7 @@
         "download_page_url": null,
         "tags": [
           "utau",
-          "english",
+          "lang:en",
           "single voicebank"
         ]
       },
@@ -159,7 +159,7 @@
         "download_page_url": null,
         "tags": [
           "utau",
-          "japanese",
+          "lang:ja",
           "old voice color"
         ]
       },
@@ -173,7 +173,7 @@
         "download_page_url": null,
         "tags": [
           "utau",
-          "japanese",
+          "lang:ja",
           "old voice color"
         ]
       },
@@ -187,7 +187,7 @@
         "download_page_url": null,
         "tags": [
           "utau",
-          "japanese",
+          "lang:ja",
           "old voice color"
         ]
       },
@@ -210,7 +210,7 @@
         "download_page_url": null,
         "tags": [
           "utau",
-          "japanese",
+          "lang:ja",
           "not up on website / archive"
         ]
       },
@@ -223,7 +223,7 @@
         "download_page_url": null,
         "tags": [
           "utau",
-          "japanese",
+          "lang:ja",
           "not up on website",
           "unofficial"
         ]
@@ -255,10 +255,10 @@
         "tags": [
           "diffsinger",
           "openutau",
-          "portuguese",
-          "english",
-          "japanese",
-          "spanish",
+          "lang:pt",
+          "lang:en",
+          "lang:ja",
+          "lang:es",
           "male"
         ]
       }
@@ -518,7 +518,7 @@
           "utau",
           "vccv english",
           "monopitch",
-          "english"
+          "lang:en"
         ]
       },
       {

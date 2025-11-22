@@ -22,9 +22,9 @@
         "download_page_url": "https://drive.google.com/file/d/1v2NZ4SXjwE3LItTJ-O3Zs5pZJmIH7nN_/view?usp=drive_link",
         "tags": [
           "utau",
-          "en",
-          "ja",
-          "fil",
+          "lang:en",
+          "lang:ja",
+          "lang:fil",
           "cvvc",
           "arpasing"
         ]
@@ -39,7 +39,7 @@
         "download_page_url": "https://drive.google.com/file/d/1k6nnf91eJ7VnZAtkaZvsXSIGc7qsJQMP/view?usp=drive_link",
         "tags": [
           "utau",
-          "en",
+          "lang:en",
           "arpasing"
         ]
       },
@@ -53,7 +53,7 @@
         "download_page_url": "https://drive.google.com/file/d/14wsBtoaru-GTyB9SxlaqS45LRirPo_mG/view?usp=drive_link",
         "tags": [
           "utau",
-          "ja",
+          "lang:ja",
           "cvvc"
         ]
       },
@@ -67,7 +67,7 @@
         "download_page_url": "https://drive.google.com/file/d/1ouTy8A2pLj-ER--Tfv_mNV9W7cWEb84P/view?usp=drive_link",
         "tags": [
           "utau",
-          "fil",
+          "lang:fil",
           "cvvc"
         ]
       }

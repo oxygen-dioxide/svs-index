@@ -21,7 +21,7 @@
         "download_page_url": "https://mega.nz/file/Vkh0GRCB#vZchq1mrLX4lgNGNF1d3zYHDY9tbUPlezuiXr9nPIu8",
         "tags": [
           "utau",
-          "ja",
+          "lang:ja",
           "cvvc"
         ]
       },
@@ -34,7 +34,7 @@
         "download_page_url": "https://bowlroll.net/file/343768",
         "tags": [
           "utau",
-          "ja",
+          "lang:ja",
           "cvvc"
         ]
       }
@@ -118,7 +118,7 @@
         "download_page_url": "https://bowlroll.net/file/318160",
         "tags": [
           "diffsinger",
-          "zh"
+          "lang:zh"
         ]
       }
     ],

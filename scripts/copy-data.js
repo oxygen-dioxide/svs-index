@@ -22,8 +22,10 @@ async function copyDir(src, dest) {
 
 async function main() {
   try {
+    await fs.mkdir(dataDest, { recursive: true });
     await copyDir(path.join(dataSrc, 'singers'), path.join(dataDest, 'singers'));
     await copyDir(path.join(dataSrc, 'softwares'), path.join(dataDest, 'softwares'));
+    await fs.copyFile(path.join(dataSrc, 'tag-whitelist.json'), path.join(dataDest, 'tag-whitelist.json'));
     console.log('✅ Copied data into dist/data');
   } catch (err) {
     console.error('Failed to copy data into dist:', err);

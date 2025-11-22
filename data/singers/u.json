@@ -24,10 +24,10 @@
         "tags": [
           "diffsinger",
           "openutau",
-          "portuguese",
-          "english",
-          "japanese",
-          "spanish",
+          "lang:pt",
+          "lang:en",
+          "lang:ja",
+          "lang:es",
           "female"
         ]
       }

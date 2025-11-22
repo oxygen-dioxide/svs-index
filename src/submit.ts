@@ -18,6 +18,23 @@ let authors: string[] = [];
 let homepageUrl: string = '';
 let profileImageUrl: string = '';
 let existingSingerIds: Set<string> = new Set();
+let tagWhitelist: Set<string> = new Set();
+
+async function loadTagWhitelist() {
+  try {
+    const res = await fetch('./data/tag-whitelist.json');
+    if (!res.ok) throw new Error('Failed to fetch tag whitelist');
+    const data = await res.json();
+    if (data.tags && Array.isArray(data.tags)) {
+      tagWhitelist = new Set(data.tags);
+    }
+  } catch (err) {
+    console.warn(
+      'Could not load tag whitelist; all tags will be subject to 8-character limit.',
+      err
+    );
+  }
+}
 
 async function loadExistingSingerIds() {
   try {
@@ -199,6 +216,18 @@ function validateVariant(
     });
   }
 
+  // Validate tags length
+  if (variant.tags && variant.tags.length > 0) {
+    variant.tags.forEach((tag) => {
+      if (tag.length > 8 && !tagWhitelist.has(tag)) {
+        errors.push({
+          field: 'tags',
+          message: `Tag "${tag}" exceeds 8 characters and is not in whitelist`,
+        });
+      }
+    });
+  }
+
   return errors;
 }
 
@@ -329,7 +358,7 @@ function addVariantToDOM(index: number): void {
         <label>Tags</label>
         <div class="tags-container" data-index="${index}"></div>
         <button class="btn-small btn-add-tag" data-index="${index}">+ Add Tag</button>
-        <small>Optional tags (e.g., "vocaloid4", "bilingual")</small>
+        <small>Optional tags (e.g., "vocaloid4", "lang:en"). Tags should be 8 characters or less unless <a href="https://github.com/openutau/svs-index/blob/main/data/tag-whitelist.json" target="_blank" rel="noopener noreferrer">whitelisted</a>.</small>
       </div>
     </div>
   `;
@@ -1024,6 +1053,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Load existing singer IDs
   loadExistingSingerIds();
+
+  // Load tag whitelist
+  loadTagWhitelist();
 
   loadState();
 
